@@ -72,14 +72,14 @@ pub trait HookEventMarker: 'static + std::marker::Send + std::marker::Sync {}
 /// Shell state containing all registered hooks
 #[derive(Default)]
 pub struct Hooks {
-    hooks: anymap::Map,
+    hooks: anymap3::Map,
 }
 
 impl Hooks {
     /// Initialize the Hooks state struct
     pub fn new() -> Self {
         Self {
-            hooks: anymap::Map::new(),
+            hooks: anymap3::Map::new(),
         }
     }
 
